@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050816" />
+    <meta
+      name="description"
+      content="Praveen Kumar Sharma - BTech IT Student at MIT Bengaluru building modern React experiences, AI-focused projects, and freelance-ready web products."
+    />
+    <meta
+      name="keywords"
+      content="Praveen Kumar Sharma, portfolio, React developer, web developer, MIT Bengaluru, internships, freelance, AI, software engineer"
+    />
+    <meta name="author" content="Praveen Kumar Sharma" />
+    <meta property="og:title" content="Praveen Kumar Sharma | Portfolio" />
+    <meta
+      property="og:description"
+      content="Modern portfolio website for internships, freelance clients, and project showcases."
+    />
+    <meta property="og:type" content="website" />
+    <title>Praveen Kumar Sharma | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (() => {
+        const key = "pks-portfolio-theme";
+        const saved = localStorage.getItem(key);
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = saved || (prefersDark ? "dark" : "dark");
+        document.documentElement.classList.toggle("dark", theme === "dark");
+      })();
+    </script>
+    <script>
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+              display: ["Space Grotesk", "sans-serif"]
+            },
+            colors: {
+              brand: {
+                50: "#effbff",
+                100: "#dff8ff",
+                200: "#b7efff",
+                300: "#7ce3ff",
+                400: "#3ed0f5",
+                500: "#1fb8e6",
+                600: "#1090be",
+                700: "#0b6d92",
+                800: "#0d5975",
+                900: "#0b3a4d"
+              },
+              accent: {
+                50: "#f7f4ff",
+                100: "#ece5ff",
+                200: "#dacbff",
+                300: "#be9fff",
+                400: "#a372ff",
+                500: "#8b5cf6",
+                600: "#7c3aed",
+                700: "#6527c4"
+              }
+            },
+            boxShadow: {
+              glow: "0 0 0 1px rgba(56, 189, 248, 0.12), 0 24px 80px rgba(14, 23, 38, 0.45)",
+              glowSoft: "0 0 0 1px rgba(148, 163, 184, 0.14), 0 16px 60px rgba(15, 23, 42, 0.28)"
+            },
+            keyframes: {
+              floaty: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-10px)" }
+              },
+              shimmer: {
+                "0%": { backgroundPosition: "-200% 0" },
+                "100%": { backgroundPosition: "200% 0" }
+              }
+            },
+            animation: {
+              floaty: "floaty 8s ease-in-out infinite",
+              shimmer: "shimmer 5s linear infinite"
+            }
+          }
+        }
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      type="application/ld+json"
+    >{
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Praveen Kumar Sharma",
+      "jobTitle": "BTech IT Student | Aspiring Software Engineer",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "MIT Bengaluru"
+      },
+      "description": "Portfolio website for internships, freelance clients, and project showcases.",
+      "sameAs": [
+        "https://github.com/praveen-kumar-sharma",
+        "https://www.linkedin.com/in/praveen-kumar-sharma/"
+      ]
+    }</script>
+    <link rel="icon" href="./public/profile-placeholder.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
